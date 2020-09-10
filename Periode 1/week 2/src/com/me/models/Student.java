@@ -1,7 +1,5 @@
 package com.me.models;
 
-import com.me.AccessLevel;
-
 import java.time.LocalDate;
 
 public class Student extends User {

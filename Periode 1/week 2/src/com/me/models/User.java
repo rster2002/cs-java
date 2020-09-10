@@ -1,9 +1,6 @@
 package com.me.models;
 
-import com.me.AccessLevel;
-
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 

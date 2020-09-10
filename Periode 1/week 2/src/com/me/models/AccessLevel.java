@@ -1,4 +1,4 @@
-package com.me;
+package com.me.models;
 
 public enum AccessLevel {
     BASIC,

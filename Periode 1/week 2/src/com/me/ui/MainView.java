@@ -1,6 +1,6 @@
 package com.me.ui;
 
-import com.me.AccessLevel;
+import com.me.models.AccessLevel;
 import com.me.models.GlobalState;
 
 import java.util.ArrayList;
