@@ -22,7 +22,7 @@ public class GlobalState {
 
     // Sets the logged in user if the password matches. This is not a check for the UI, but rather a safeguard making
     // sure the user can only be set if the password is valid. Password checking should still be handles by checking
-    // in the servive layer
+    // in the service layer
     public void setLoggedInUser(User user, String password) {
         if (user.checkPassword(password)) loggedInUser = user;
     }

@@ -9,13 +9,14 @@ public class LoginView extends View {
     @Override
     public void display() {
         while (active) {
+            clearScreen();
+
             print("Enter username: ");
             String username = scanner.nextLine();
 
             print("Enter password: ");
             String password = scanner.nextLine();
 
-            clearScreen();
             LoginSuccessState loginResponse = loginLogic.login(username, password);
 
             if (loginResponse == LoginSuccessState.NO_USER) {

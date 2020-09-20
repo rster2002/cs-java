@@ -49,6 +49,13 @@ public class MainView extends View {
                     showView(new AddStudentPrompt());
                 }
             });
+
+            options.add(new KeyPromptOption('R', "Show reports") {
+                @Override
+                public void onKey() {
+                    showView(new StudentsReportListView());
+                }
+            });
         }
 
         // Add final option to exit to login screen
@@ -56,8 +63,7 @@ public class MainView extends View {
             @Override
             public void onKey() {
                 print("Exiting program...");
-                active = false;
-//                changeView(new LoginView());
+                System.exit(0);
             }
         });
 

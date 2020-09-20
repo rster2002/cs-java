@@ -1,6 +1,7 @@
 package com.me.data;
 
 import com.me.models.Student;
+import com.me.models.Subject;
 import com.me.models.Teacher;
 import com.me.models.User;
 
@@ -9,12 +10,15 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.Random;
+
 // Data repo, this would usually be a DAL with access to a database, but this will have to do for now.
 public class UserRepo {
     private static UserRepo instance;
 
     private int currentId = 0;
     private final List<User> users = new ArrayList<User>();
+    private final Random random = new Random();
 
     // Instance management
     private UserRepo() {
@@ -60,7 +64,19 @@ public class UserRepo {
         LocalDate birthDate = LocalDate.of(1997, 1, 1);
         String group = "INF2Sc";
 
-        return new Student(id, username, password, firstName, lastName, birthDate, group);
+        Student student = new Student(id, username, password, firstName, lastName, birthDate, group);
+        student.subjects.add(new Subject("Java", getRandomGrade()));
+        student.subjects.add(new Subject("CSharp", getRandomGrade()));
+        student.subjects.add(new Subject("Python", getRandomGrade()));
+        student.subjects.add(new Subject("PHP", getRandomGrade()));
+
+        return student;
+    }
+
+    private double getRandomGrade() {
+        // Get a random int in range of <10, 100>
+        int score = random.nextInt(90) + 10;
+        return (double) score / 10;
     }
 
     private Teacher createTeacher() {
