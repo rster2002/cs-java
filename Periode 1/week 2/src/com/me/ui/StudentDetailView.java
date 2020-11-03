@@ -52,9 +52,11 @@ public class StudentDetailView extends View {
     }
 
     private void printKeyValuePair(String key, String value) {
+        // Set some configurable constants
         final int spacingSize = 2;
         final String repeatedPaddingString = ".";
 
+        // Calculate the length of the dotStrings
         int paddingLength = detailsWidth - key.length() - value.length() - 2 * spacingSize;
         String paddingString = repeatedPaddingString.repeat(paddingLength);
         String spacingString = " ".repeat(spacingSize);
@@ -64,6 +66,7 @@ public class StudentDetailView extends View {
     }
 
     private void printHeader(String headerText) {
+        // Calculate how many spaces need to exist before
         int leadingSpaces = (detailsWidth - headerText.length()) / 2;
         String leadingSpacesString = " ".repeat(leadingSpaces);
 
@@ -78,7 +81,7 @@ public class StudentDetailView extends View {
         options.add(new KeyPromptOption('A', "Add (Update Report)") {
             @Override
             public void onKey() {
-                changeView(new ChangeStudentGrades(student));
+                changeView(new ChangeStudentGradesView(student));
             }
         });
 

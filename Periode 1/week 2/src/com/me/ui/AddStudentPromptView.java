@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-public class AddStudentPrompt extends View {
+public class AddStudentPromptView extends View {
     private final UserRepo userRepo = UserRepo.getInstance();
 
     @Override

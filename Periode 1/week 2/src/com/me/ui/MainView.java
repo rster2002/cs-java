@@ -46,7 +46,7 @@ public class MainView extends View {
             options.add(new KeyPromptOption('A', "Add student") {
                 @Override
                 public void onKey() {
-                    showView(new AddStudentPrompt());
+                    showView(new AddStudentPromptView());
                 }
             });
 

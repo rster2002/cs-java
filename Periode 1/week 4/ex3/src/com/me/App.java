@@ -85,7 +85,7 @@ public class App extends Application {
             }
         }
 
-        // Create a reset button
+        // Create the reset button
         Button resetButton = new Button("Reset game");
         GridPane.setConstraints(resetButton, 2, 3);
         grid.getChildren().addAll(resetButton);

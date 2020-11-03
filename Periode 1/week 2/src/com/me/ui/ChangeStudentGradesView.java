@@ -3,10 +3,10 @@ package com.me.ui;
 import com.me.models.Student;
 import com.me.models.Subject;
 
-public class ChangeStudentGrades extends View {
+public class ChangeStudentGradesView extends View {
     private final Student student;
 
-    public ChangeStudentGrades(Student student) {
+    public ChangeStudentGradesView(Student student) {
         this.student = student;
     }
 
